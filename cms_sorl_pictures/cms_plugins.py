@@ -1,7 +1,7 @@
 from cms.plugin_pool import plugin_pool
 from cms.plugin_base import CMSPluginBase
 from django.utils.translation import ugettext_lazy as _
-from cms.plugins.picture.models import Picture
+from cms_sorl_pictures.models import SorlPicture
 from django.conf import settings
 
 class SorlPicturePlugin(CMSPluginBase):
@@ -17,8 +17,37 @@ class SorlPicturePlugin(CMSPluginBase):
             link = instance.page_link.get_absolute_url()
         else:
             link = ""
+        
+        picture_options = {}
+        if instance.crop:
+            picture_options['crop'] = instance.crop
+        if instance.upscale:
+            picture_options['upscale'] = 'TRUE'
+        else:
+            picture_options['upscale'] = 'FALSE'
+        if instance.quality:
+            picture_options['quality'] = instance.quality
+        if instance.progressive:
+            picture_options['progressive'] = 'TRUE'
+        else:
+            picture_options['progressive'] = 'FALSE'
+        if instance.format:
+            picture_options['format'] = instance.format
+        if instance.colorspace:
+            picture_options['format'] = instance.colorspace
+        if instance.orientation:
+            picture_options['orientation'] = 'TRUE'
+        else:
+            picture_options['orientation'] = 'FALSE'
+        
+        picture_dimensions = ""
+        if instance.height or instance.width:
+            picture_dimensions = str(instance.width) + "x" + str(instance.height)
+        
         context.update({
             'picture': instance,
+            'picture_dimensions': picture_dimensions,
+            'picture_options': picture_options,
             'link': link, 
             'placeholder': placeholder
         })

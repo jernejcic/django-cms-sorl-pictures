@@ -1,5 +1,9 @@
+{% load thumbnail %}
+
 <span class="plugin_picture{% if picture.float %} align-{{ picture.float }}{% endif %}">
 {% if link %}<a href="{{ link }}">{% endif %}
-<img src="{{ picture.image.url }}" alt="{{ picture.alt }}"{% if picture.longdesc %} title="{{ picture.longdesc }}"{% endif %} />
+{% thumbnail picture.image picture_dimensions options=picture_options as im %}
+    <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" {% if picture.alt %} alt="{{ picture.alt }}"{% endif %}{% if picture.longdesc %} title="{{ picture.longdesc }}"{% endif %} >
+{% endthumbnail %}
 {% if link %}</a>{% endif %}
 </span>
