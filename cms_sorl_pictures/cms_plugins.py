@@ -1,7 +1,7 @@
 from cms.plugin_pool import plugin_pool
 from cms.plugin_base import CMSPluginBase
 from django.utils.translation import ugettext_lazy as _
-from cms.plugins.picture.models import Picture
+from skiandsnow.cms_sorl_pictures.models import SorlPicture
 from django.conf import settings
 
 class SorlPicturePlugin(CMSPluginBase):
