@@ -35,7 +35,6 @@ class SorlPicture(CMSPlugin):
     #SMART = "smart" # Doesn't seem to be working.
     NOOP = "noop"
     CROP_CHOICES = ((NOOP, _("noop")),
-                    (SMART, _("smart")),
                     (CENTER, _("center")),
                     (TOP, _("top")),
                     (RIGHT, _("right")),
