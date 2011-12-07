@@ -38,7 +38,7 @@ setup(
         "sorl-thumbnail>=11.09.1",
     ],
 
-    download_url= 'https://mostlybinary@github.com/mostlybinary/django-cms-sorl-pictures.git',
+    download_url= 'https://github.com/mostlybinary/django-cms-sorl-pictures/tarball/v0.1.2',
     classifiers=[
         "Development Status :: 2 - Pre-Alpha",
         "Framework :: Django",
