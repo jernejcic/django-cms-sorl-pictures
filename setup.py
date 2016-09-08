@@ -21,7 +21,7 @@ setup(
     description = 'Django CMS Sorl Pictures Plugins',
     author = 'Luke Jernejcic',
     author_email = 'luke@jernejcic.com',
-    url = 'http://github.com/mostlybinary/django-cms-sorl-pictures',
+    url = 'http://github.com/django/django-cms-sorl-pictures',
     packages = find_packages(),
     package_data={
         'cms_sorl_pictures': [
