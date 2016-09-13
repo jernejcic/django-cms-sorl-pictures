@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-version = "0.1.3"
+version = "0.1.4"
 
 long_description = ""
 try:
@@ -21,7 +21,7 @@ setup(
     description = 'Django CMS Sorl Pictures Plugins',
     author = 'Luke Jernejcic',
     author_email = 'luke@jernejcic.com',
-    url = 'http://github.com/django/django-cms-sorl-pictures',
+    url = 'http://github.com/jernejcic/django-cms-sorl-pictures',
     packages = find_packages(),
     package_data={
         'cms_sorl_pictures': [
@@ -38,7 +38,7 @@ setup(
         "sorl-thumbnail>=11.09.1",
     ],
 
-    download_url= 'https://github.com/mostlybinary/django-cms-sorl-pictures/tarball/v0.1.2',
+    download_url= 'https://github.com/jernejcic/django-cms-sorl-pictures/tarball/v0.1.4',
     classifiers=[
         "Development Status :: 2 - Pre-Alpha",
         "Framework :: Django",
@@ -50,5 +50,5 @@ setup(
     ],
     long_description=long_description,
     license=license,
-    keywords = "django cms sorl thumbnails photos pictures",
+    keywords = "django cms photos pictures plugin sorl thumbnails",
 )

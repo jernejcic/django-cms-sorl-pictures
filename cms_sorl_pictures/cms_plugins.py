@@ -40,7 +40,7 @@ class SorlPicturePlugin(CMSPluginBase):
         else:
             picture_options['orientation'] = 'FALSE'
         
-        picture_dimensions = ""
+        picture_dimensions = "200x200"
         if instance.height or instance.width:
             picture_dimensions = str(instance.width) + "x" + str(instance.height)
         
